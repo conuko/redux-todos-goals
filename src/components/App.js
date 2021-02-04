@@ -19,10 +19,15 @@ class App extends React.Component {
           return <h3>Loading</h3>
       }
       return (
-          <div>
-              <ConnectedTodos />
-              <ConnectedGoals />
-          </div>
+        <div className="flex h-screen">
+          <div
+          className="max-w-md m-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+            <ConnectedTodos />
+            <ConnectedGoals />  
+        </div>
+
+        </div>
+
       )
   };
 };

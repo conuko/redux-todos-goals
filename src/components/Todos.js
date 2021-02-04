@@ -33,14 +33,24 @@ class Todos extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Todo List</h1>
-                <input
-                    type='text'
-                    placeholder='Add Todo'
-                    ref={(input) => this.input = input}
-                />
-                <button onClick={this.addItem}>Add Todo</button>
+            <div className="p-12">
+                <h1 className="uppercase block text-gray-700 text-sm font-bold mb-2">
+                Todos
+                </h1>
+                <div className='flex items-center justify-between relative'>
+                    <input
+                        name="field_name"
+                        className="p-4 pr-20 py-2 border-2 border-gray-200 rounded bg-grey-200 text-gray-600 w-full leading-tight shadow-md focus:outline-none focus:bg-white focus:border-blue-300"                        
+                        type='text'
+                        placeholder='Add Todo'
+                        ref={(input) => this.input = input}
+                    />
+                    <button 
+                    className="text-blue-900 hover:text-blue-500 bg-white font-semibold py-1 px-2 absolute right-0 mr-2 focus:outline-none"
+                    onClick={this.addItem}>
+                        Add
+                    </button>
+                </div>
                 <List
                     items={this.props.todos}
                     remove={this.removeItem}
