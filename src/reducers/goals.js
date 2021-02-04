@@ -1,3 +1,4 @@
+import { RECEIVE_DATA } from '../actions/shared';
 import {
     ADD_GOAL,
     REMOVE_GOAL
